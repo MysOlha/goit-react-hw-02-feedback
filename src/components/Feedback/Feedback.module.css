@@ -1,0 +1,36 @@
+.container {
+    width: 500px;
+    border: 1px solid rgb(150, 147, 147);
+    border-radius: 5px;
+    margin: 30px auto;
+    background-image: linear-gradient(to bottom, rgb(214, 209, 210), rgb(107, 92, 92));
+}
+
+
+
+.btnContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+}
+
+.btnFeedback {
+    padding: 5px 8px;
+    width: 150px;
+    cursor: pointer;
+    border: 1px solid rgb(197, 194, 194);
+    border-radius: 10px;
+    transition: background-color 500ms;
+}
+
+.btnFeedback:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  .btnFeedback:hover {
+    color: #fff;
+    background-color: rgb(88, 76, 76);
+    border-color: rgb(46, 43, 43);
+  }
+
