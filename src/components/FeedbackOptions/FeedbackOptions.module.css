@@ -24,7 +24,7 @@
     transition: background-color 500ms;
 }
 
-.btnFeedback:not(:last-child) {
+.btnList:not(:last-child) {
     margin-right: 12px;
   }
 
@@ -33,4 +33,5 @@
     background-color: rgb(88, 76, 76);
     border-color: rgb(46, 43, 43);
   }
+
 
