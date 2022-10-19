@@ -7,9 +7,9 @@ import css from "./FeedbackOptions/FeedbackOptions.module.css"
 
 class App extends React.Component {
   state = {
-      Good: 0,
-      Neutral: 0,
-      Bad: 0
+      good: 0,
+      neutral: 0,
+      bad: 0
     }
 
 
@@ -37,13 +37,14 @@ class App extends React.Component {
 
 
   countTotalFeedback = () => {
-  const { Good, Neutral, Bad } = this.state;
-  return Good + Neutral + Bad;
+  const { good, neutral, bad } = this.state;
+  return good + neutral + bad;
   }
 
   countPositiveFeedbackPercentage = () => {
-   const { Good, Neutral, Bad } = this.state;
-   return (Math.round(Good/(Good+Neutral+Bad)*100))
+   const { good } = this.state;
+   const totalFeedback = this.countTotalFeedback()
+   return (Math.round(good/totalFeedback*100))
   }
 
   render() {
@@ -66,9 +67,9 @@ class App extends React.Component {
          (<>
             <Section title="Statistics">
               <Statistics 
-              good={this.state.Good} 
-              neutral={this.state.Neutral} 
-              bad={this.state.Bad} 
+              good={this.state.good} 
+              neutral={this.state.neutral} 
+              bad={this.state.bad} 
               total={total} 
               positivePercentage={positive}/>
             </Section>
